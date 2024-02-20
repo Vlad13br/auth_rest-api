@@ -7,7 +7,7 @@ require('dotenv').config()
 
 const app = express()
 
-// app.use(limiter(15 * 60 * 1000, 100))
+app.use(limiter(15 * 60 * 1000, 100))
 app.use(cors())
 app.use(express.json({ limit: 10000 }))
 
